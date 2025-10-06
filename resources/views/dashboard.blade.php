@@ -13,6 +13,10 @@
         </div>
         <div class="relative h-full flex-1 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
             <livewire:show-mahasiswa />
+            <h1>INI BAGIAN DARI FEEDBACK FORM</h1>
+            <livewire:feedback-form />
+            <h1>INI BAGIAN DARi CONTACT FORM</h1>
+            <livewire:contact-form />
         </div>
     </div>
 </x-layouts.app>

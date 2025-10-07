@@ -17,6 +17,8 @@
             <livewire:feedback-form />
             <h1>INI BAGIAN DARi CONTACT FORM</h1>
             <livewire:contact-form />
+            <h1>INI BAGIAN DARI TAMPIL DATA</h1>
+            <livewire:tampil-data />
         </div>
     </div>
 </x-layouts.app>

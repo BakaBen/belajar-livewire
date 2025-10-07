@@ -23,5 +23,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Mahasiswa::factory(50)->create();
+
+        \App\Models\Contact::factory(50)->create();
     }
 }

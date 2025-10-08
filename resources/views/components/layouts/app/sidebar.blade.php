@@ -33,6 +33,7 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="academic-cap" :href="route('dosen.table')" :current="request()->routeIs('dosen.table')" wire:navigate>{{ __('Data Dosen') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
@@ -48,6 +49,7 @@
                 </flux:navlist.item>
             </flux:navlist>
 
+            @auth
             <!-- Desktop User Menu -->
             <flux:dropdown class="hidden lg:block" position="bottom" align="start">
                 <flux:profile
@@ -98,8 +100,10 @@
                     </form>
                 </flux:menu>
             </flux:dropdown>
+            @endauth
         </flux:sidebar>
 
+        @auth
         <!-- Mobile User Menu -->
         <flux:header class="lg:hidden">
             <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
@@ -155,6 +159,7 @@
                 </flux:menu>
             </flux:dropdown>
         </flux:header>
+        @endauth
 
         {{ $slot }}
 

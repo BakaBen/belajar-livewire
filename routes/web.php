@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\ContactTable;
+use App\Livewire\DosenTable;
 use App\Livewire\FeedbackForm;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
@@ -26,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
     Route::get('contact-data', ContactTable::class)->name('contact.data');
+    Route::get('dosen', DosenTable::class)->name('dosen.table');
 
     Route::get('settings/two-factor', TwoFactor::class)
         ->middleware(
